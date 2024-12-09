@@ -2,6 +2,36 @@ import React, { useState, useEffect } from 'react';
 import ColumnSelector from './ColumnSelector';
 import ChartTypeSelector from './ChartTypeSelector';
 import ChartDisplay from '../ChartDisplay';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement,
+  RadialLinearScale,
+  Filler
+} from 'chart.js';
+import { Chart } from 'react-chartjs-2';
+
+// Register Chart.js components
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement,
+  RadialLinearScale,
+  Filler
+);
 
 interface InteractiveGraphControlsProps {
   data: any[];
